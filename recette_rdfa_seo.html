@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:schema="https://schema.org/">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tajine de Poulet aux Citrons Confits et Olives | Recette Marocaine Traditionnelle</title>
+  <meta name="description" content="Recette authentique du Tajine de Poulet aux Citrons Confits et Olives. Facile à préparer, riche en saveurs. Temps de préparation : 20 min. Cuisson : 60 min."/>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --clay:        #C1440E;
+      --saffron:     #E8A020;
+      --gold:        #D4A843;
+      --cream:       #FAF6EE;
+      --dark:        #2A1F14;
+      --muted:       #7A6552;
+      --border:      #E2D5C0;
+      --white:       #FFFFFF;
+      --shadow:      0 4px 24px rgba(42,31,20,.10);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--cream);
+      color: var(--dark);
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, #2A1F14 0%, #5C3317 50%, #C1440E 100%);
+      padding: 64px 24px 80px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: .6;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--saffron);
+      color: var(--white);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 2px;
+      margin-bottom: 18px;
+      position: relative;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      color: var(--white);
+      line-height: 1.2;
+      position: relative;
+      max-width: 760px;
+      margin: 0 auto 16px;
+    }
+    .hero-sub {
+      color: rgba(255,255,255,.70);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin: 0 auto 32px;
+      position: relative;
+    }
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      position: relative;
+    }
+    .pill {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.20);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: .85rem;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .pill span.icon { font-size: 1rem; }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .ratings-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+    .ratings-inner {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .stars { color: var(--saffron); font-size: 1.1rem; letter-spacing: 2px; }
+    .rating-label {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--clay);
+    }
+    .rating-count { color: var(--muted); font-size: .9rem; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      padding: 52px 0;
+      align-items: start;
+    }
+    @media(max-width:640px){ .two-col { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 16px;
+    }
+
+    .ingredient-list { list-style: none; }
+    .ingredient-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 0;
+      border-bottom: 1px dashed var(--border);
+      font-size: .92rem;
+    }
+    .ingredient-list li:last-child { border-bottom: none; }
+    .ing-qty {
+      font-weight: 700;
+      color: var(--clay);
+      min-width: 60px;
+      text-align: right;
+    }
+
+    .steps-list { list-style: none; counter-reset: step-counter; }
+    .steps-list li {
+      position: relative;
+      padding: 0 0 28px 56px;
+      counter-increment: step-counter;
+    }
+    .steps-list li:last-child { padding-bottom: 0; }
+    .steps-list li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0; top: 0;
+      width: 36px; height: 36px;
+      background: var(--clay);
+      color: var(--white);
+      border-radius: 50%;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .steps-list li::after {
+      content: '';
+      position: absolute;
+      left: 17px; top: 36px;
+      width: 2px;
+      height: calc(100% - 36px);
+      background: var(--border);
+    }
+    .steps-list li:last-child::after { display: none; }
+    .step-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--dark);
+    }
+    .step-text { font-size: .93rem; color: var(--muted); }
+
+    .nutrition-section { padding-bottom: 52px; }
+    .nutrition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .nut-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 12px;
+      text-align: center;
+    }
+    .nut-val {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--clay);
+    }
+    .nut-lbl { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+
+    .reviews-section { padding-bottom: 60px; }
+    .review-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .reviewer-name { font-weight: 700; font-size: .95rem; }
+    .review-date { color: var(--muted); font-size: .82rem; }
+    .review-stars { color: var(--saffron); font-size: .95rem; }
+    .review-text { font-size: .92rem; color: var(--muted); }
+
+    .footer-strip {
+      background: var(--dark);
+      color: rgba(255,255,255,.50);
+      text-align: center;
+      padding: 24px;
+      font-size: .82rem;
+    }
+
+    .rdfa-badge {
+      position: fixed;
+      bottom: 20px; right: 20px;
+      background: var(--clay);
+      color: var(--white);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      padding: 8px 14px;
+      border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.25);
+      z-index: 999;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+<article vocab="https://schema.org/" typeof="Recipe">
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-tag">Recette Marocaine Traditionnelle</div>
+
+      <h1 property="name">
+        Tajine de Poulet aux Citrons Confits &amp; Olives
+      </h1>
+
+      <p class="hero-sub" property="description">
+        Un tajine savoureux et parfumé, préparé selon la tradition marocaine avec du safran,
+        du gingembre et des citrons confits maison. Idéal pour un repas en famille ou entre amis.
+      </p>
+
+      <meta property="prepTime"   content="PT20M"/>
+      <meta property="cookTime"   content="PT60M"/>
+      <meta property="totalTime"  content="PT80M"/>
+      <meta property="recipeYield" content="4 personnes"/>
+      <meta property="recipeCuisine" content="Marocaine"/>
+      <meta property="recipeCategory" content="Plat principal"/>
+      <meta property="keywords"   content="tajine, poulet, citron confit, olives, recette marocaine, plat traditionnel"/>
+
+      <meta property="image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Tajine_de_poulet.jpg/1200px-Tajine_de_poulet.jpg"/>
+
+      <div class="meta-pills">
+        <div class="pill"><span class="icon">🕐</span> Préparation : <strong>20 min</strong></div>
+        <div class="pill"><span class="icon">🔥</span> Cuisson : <strong>60 min</strong></div>
+        <div class="pill"><span class="icon">👥</span> Pour : <strong>4 personnes</strong></div>
+        <div class="pill"><span class="icon">📊</span> Difficulté : <strong>Facile</strong></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="ratings-strip" typeof="AggregateRating" property="aggregateRating">
+    <div class="container ratings-inner">
+      <div class="stars">★★★★★</div>
+      <span class="rating-label" property="ratingValue">4.8</span>
+      <span class="rating-count">
+        (<span property="ratingCount">124</span> avis —
+        <span property="reviewCount">38</span> commentaires)
+      </span>
+      <meta property="bestRating"  content="5"/>
+      <meta property="worstRating" content="1"/>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="two-col">
+
+      <aside class="card">
+        <p class="section-label">Ingrédients</p>
+        <h2>Pour 4 pers.</h2>
+        <ul class="ingredient-list" style="margin-top:16px">
+          <li>
+            <span property="recipeIngredient">1 poulet fermier (1,5 kg), découpé</span>
+            <span class="ing-qty">1</span>
+          </li>
+          <li>
+            <span property="recipeIngredient">2 citrons confits</span>
+            <span class="ing-qty">2</span>
+          </li>
+          <li>
+            <span property="recipeIngredient">100 g d'olives vertes ou violettes</span>
+            <span class="ing-qty">100 g</span>
+          </li>
+          <li>
+            <span property="recipeIngredient">2 oignons moyens émincés</span>
+            <span class="ing-qty">2</span>
+          </li>
+          <li>
+            <span property="recipeIngredient">3 gousses d'ail</span>
+            <span class="ing-qty">3</span>
+          </li>
+          <li>
+            <span property="recipeIngredient">1 c.à.c safran en filaments</span>
+            <span class="ing-qty">1 c.c</span>
+          </li>
+          <li>
+            <span property="recipeIngredient">1 c.à.c gingembre en poudre</span>
+            <span class="ing-qty">1 c.c</span>
+          </li>
+          <li>
+            <span property="recipeIngredient">1 c.à.c curcuma</span>
+            <span class="ing-qty">1 c.c</span>
+          </li>
+          <li>
+            <span property="recipeIngredient">4 c.à.s huile d'olive</span>
+            <span class="ing-qty">4 c.s</span>
+          </li>
+          <li>
+            <span property="recipeIngredient">Persil et coriandre frais hachés</span>
+            <span class="ing-qty">½ botte</span>
+          </li>
+          <li>
+            <span property="recipeIngredient">Sel et poivre noir</span>
+            <span class="ing-qty">QS</span>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="card">
+        <p class="section-label">Préparation</p>
+        <h2>Étapes</h2>
+        <ol class="steps-list" style="margin-top:16px">
+
+          <li property="recipeInstructions" typeof="HowToStep">
+            <meta property="position" content="1"/>
+            <p class="step-title" property="name">Marinade du poulet</p>
+            <p class="step-text" property="text">
+              Dans un grand bol, mélangez le safran dilué dans un peu d'eau chaude, le gingembre,
+              le curcuma, l'ail écrasé, le sel et le poivre. Badigeonnez généreusement les morceaux
+              de poulet et laissez mariner au moins 30 minutes (idéalement 2h au réfrigérateur).
+            </p>
+          </li>
+
+          <li property="recipeInstructions" typeof="HowToStep">
+            <meta property="position" content="2"/>
+            <p class="step-title" property="name">Faire revenir les oignons</p>
+            <p class="step-text" property="text">
+              Dans le bas du tajine (ou une cocotte), chauffez l'huile d'olive à feu moyen.
+              Faites revenir les oignons émincés pendant 8 à 10 minutes jusqu'à ce qu'ils soient
+              translucides et légèrement dorés.
+            </p>
+          </li>
+
+          <li property="recipeInstructions" typeof="HowToStep">
+            <meta property="position" content="3"/>
+            <p class="step-title" property="name">Dorer le poulet</p>
+            <p class="step-text" property="text">
+              Ajoutez les morceaux de poulet marinés et faites-les dorer sur toutes les faces
+              pendant 5 minutes. Versez ensuite 200 ml d'eau, couvrez avec le chapeau du tajine
+              et laissez mijoter à feu doux pendant 35 minutes.
+            </p>
+          </li>
+
+          <li property="recipeInstructions" typeof="HowToStep">
+            <meta property="position" content="4"/>
+            <p class="step-title" property="name">Ajouter les citrons et olives</p>
+            <p class="step-text" property="text">
+              Rincez les citrons confits, coupez-les en quartiers et retirez la pulpe. Ajoutez les
+              écorces avec les olives autour du poulet. Poursuivez la cuisson 15 à 20 minutes à
+              découvert pour faire réduire la sauce.
+            </p>
+          </li>
+
+          <li property="recipeInstructions" typeof="HowToStep">
+            <meta property="position" content="5"/>
+            <p class="step-title" property="name">Finition et service</p>
+            <p class="step-text" property="text">
+              Parsemez de persil et coriandre frais hachés. Servez chaud directement dans le tajine
+              avec du pain marocain (khobz) ou de la semoule. Bon appétit !
+            </p>
+          </li>
+
+        </ol>
+      </div>
+    </div><!-- /.two-col -->
+
+    <section class="nutrition-section" property="nutrition" typeof="NutritionInformation">
+      <p class="section-label">Valeurs nutritionnelles</p>
+      <h2>Par portion (1/4 de recette)</h2>
+      <div class="nutrition-grid">
+        <div class="nut-box">
+          <span class="nut-val" property="calories">420 kcal</span>
+          <span class="nut-lbl">Calories</span>
+        </div>
+        <div class="nut-box">
+          <span class="nut-val" property="proteinContent">38 g</span>
+          <span class="nut-lbl">Protéines</span>
+        </div>
+        <div class="nut-box">
+          <span class="nut-val" property="fatContent">22 g</span>
+          <span class="nut-lbl">Lipides</span>
+        </div>
+        <div class="nut-box">
+          <span class="nut-val" property="carbohydrateContent">14 g</span>
+          <span class="nut-lbl">Glucides</span>
+        </div>
+        <div class="nut-box">
+          <span class="nut-val" property="fiberContent">3 g</span>
+          <span class="nut-lbl">Fibres</span>
+        </div>
+        <div class="nut-box">
+          <span class="nut-val" property="sodiumContent">620 mg</span>
+          <span class="nut-lbl">Sodium</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section">
+      <p class="section-label">Avis clients</p>
+      <h2>Ce que disent nos lecteurs</h2>
+      <div style="margin-top:24px">
+
+        <div class="review-card" property="review" typeof="Review">
+          <div class="review-header">
+            <span class="reviewer-name" property="author" typeof="Person">
+              <span property="name">Fatima Z.</span>
+            </span>
+            <span class="review-stars" property="reviewRating" typeof="Rating">
+              <meta property="ratingValue" content="5"/>
+              <meta property="bestRating"  content="5"/>
+              ★★★★★
+            </span>
+            <span class="review-date" property="datePublished">2025-03-12</span>
+          </div>
+          <p class="review-text" property="reviewBody">
+            Recette parfaite ! J'ai suivi les étapes à la lettre et le résultat était
+            absolument délicieux. La sauce était bien réduite et le poulet fondant. Toute
+            la famille a adoré, je la referai certainement très prochainement.
+          </p>
+        </div>
+
+        <div class="review-card" property="review" typeof="Review">
+          <div class="review-header">
+            <span class="reviewer-name" property="author" typeof="Person">
+              <span property="name">Youssef M.</span>
+            </span>
+            <span class="review-stars" property="reviewRating" typeof="Rating">
+              <meta property="ratingValue" content="5"/>
+              <meta property="bestRating"  content="5"/>
+              ★★★★★
+            </span>
+            <span class="review-date" property="datePublished">2025-02-28</span>
+          </div>
+          <p class="review-text" property="reviewBody">
+            Excellent ! Le safran et les citrons confits donnent un parfum incroyable.
+            Conseil : utiliser des citrons confits maison pour un résultat encore meilleur.
+            La cuisson lente fait vraiment toute la différence.
+          </p>
+        </div>
+
+        <div class="review-card" property="review" typeof="Review">
+          <div class="review-header">
+            <span class="reviewer-name" property="author" typeof="Person">
+              <span property="name">Sophie L.</span>
+            </span>
+            <span class="review-stars" property="reviewRating" typeof="Rating">
+              <meta property="ratingValue" content="4"/>
+              <meta property="bestRating"  content="5"/>
+              ★★★★☆
+            </span>
+            <span class="review-date" property="datePublished">2025-01-15</span>
+          </div>
+          <p class="review-text" property="reviewBody">
+            Très bonne recette, facile à suivre même pour les débutants. J'ai remplacé les olives
+            vertes par des olives noires et c'était tout aussi savoureux. Je recommande !
+          </p>
+        </div>
+
+      </div><!-- /reviews -->
+    </section>
+
+  </div><!-- /.container -->
+
+  <meta property="author" typeof="Person" content=""/>
+  <span hidden property="author" typeof="Person">
+    <span property="name">École Normale Supérieure de Mohammedia</span>
+  </span>
+
+  <meta property="datePublished" content="2025-04-01"/>
+
+</article><!-- /Recipe -->
+
+<footer class="footer-strip">
+  <p>© 2025 Recettes du Maroc · Page annotée avec <strong>RDFa + Schema.org</strong> pour les Rich Snippets Google</p>
+  <p style="margin-top:6px;font-size:.75rem;">
+    Testez cette page sur :
+    <a href="https://search.google.com/test/rich-results" target="_blank" style="color:var(--saffron)">Google Rich Results Test</a> &nbsp;|&nbsp;
+    <a href="https://rdfa.info/play/" target="_blank" style="color:var(--saffron)">RDFa Play</a>
+  </p>
+</footer>
+
+
+</body>
+</html>
